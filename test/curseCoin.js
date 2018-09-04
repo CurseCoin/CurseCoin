@@ -12,7 +12,7 @@ contract("CurseCoin", function (accounts) {
       victim = accounts[1];
 
       return ccInstance.curse(victim, {
-        from: curser, value: web3.toWei("2", "ether")
+        from: curser, value: web3.toWei("30", "finney")
       }).then(function (receipt) {
         return ccInstance.unfortunates(victim);
       }).then(function (cursed) {
@@ -29,10 +29,10 @@ contract("CurseCoin", function (accounts) {
   //     victim = accounts[3];
 
   //     return ccInstance.curse(victim, {
-  //       from: curser, value: web3.toWei("2", "ether")
+  //       from: curser, value: web3.toWei("30", "finney")
   //     }).then(function (receipt) {
   //       return ccInstance.nullify({
-  //         from: victim, value: web3.toWei("2", "ether")
+  //         from: victim, value: web3.toWei("30", "finney")
   //       });
   //     }).then(function (uncurse) {
   //       assert(!ccInstance.unfortunates(victim), "the victim is uncursed")
@@ -48,10 +48,10 @@ contract("CurseCoin", function (accounts) {
       victim = accounts[3];
 
       return ccInstance.curse(victim, {
-        from: curser, value: web3.toWei("2", "ether")
+        from: curser, value: web3.toWei("30", "finney")
       }).then(function (receipt) {
         var curseCheck = ccInstance.amICursed({
-          from: victim, value: web3.toWei("2", "ether")
+          from: victim, value: web3.toWei("30", "finney")
         });
         assert(curseCheck, "the victim should be cursed")
       });

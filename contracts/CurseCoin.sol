@@ -23,7 +23,7 @@ contract CurseCoin is Ownable {
     constructor() public {
         name = "CurseCoin";
         symbol = "CC";
-        curseCost = 1 ether;
+        curseCost = 20 finney;
     }
 
     // curse allows msg.sender to curse a victim if they pay the curseCost
