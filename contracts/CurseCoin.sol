@@ -46,7 +46,7 @@ contract CurseCoin is Ownable {
         // first check if curse's address
         require((unfortunates[msg.sender] == true), "You're not even cursed 🤔");
 
-        unfortunates[msg.sender] = true;
+        unfortunates[msg.sender] = false;
         emit Nullify(msg.sender);
     }
 
