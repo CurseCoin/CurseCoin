@@ -22,7 +22,7 @@ contract CurseCoin is Ownable {
 
     constructor() public {
         name = "CurseCoin";
-        symbol = "CC";
+        symbol = "😈";
         curseCost = 20 finney;
     }
 
