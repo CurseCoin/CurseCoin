@@ -1,14 +1,10 @@
 pragma solidity ^0.4.2;
 
-// SafeMath helps prevent integer overflows
-import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 // Ownable helps streamline contract inheritance
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 // Initiates this address as the owner
 contract CurseCoin is Ownable {
-    // adds SafeMath methods to uint256 types
-    using SafeMath for uint256;
 
     string public name;
     string public symbol;
@@ -53,6 +49,11 @@ contract CurseCoin is Ownable {
     // withdraw allows the brilliant contract writers to cash out
     function withdraw() public onlyOwner {
         msg.sender.transfer(address(this).balance);
+    }
+
+    // cost is a getter for seeing the curseCost
+    function cost() public view returns (uint256) {
+        return curseCost;
     }
 
     // amICursed allows msg.sender to check if they're cursed
