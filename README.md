@@ -10,4 +10,6 @@ If your account is cursed, you can also pay the curse cost to lift your curse. Y
 
 Deets can be found in contracts/CurseCoin.sol.
 
+Slides from talk at [BlockchainConf.Tech](http://blockchainconf.tech/) -> https://docs.google.com/presentation/d/1Bf_seU-5Msr8H-p31WnXOcfIGajoWk_1Yzziw9O70hQ/edit?usp=sharing
+
 Enjoy and don't curse too hard.
